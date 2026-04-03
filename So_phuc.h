@@ -10,6 +10,11 @@ class SoPhuc
         void Nhap();
         void Xuat();
         SoPhuc (int a=0,int b=0): iThuc(a), iAo(b){};
+        SoPhuc(const SoPhuc &p)
+        {
+            iThuc = p.iThuc;
+            iAo = p.iAo;
+        }
         friend SoPhuc operator+ (SoPhuc,SoPhuc);
         friend SoPhuc operator- (SoPhuc,SoPhuc);
         friend SoPhuc operator* (SoPhuc,SoPhuc);
